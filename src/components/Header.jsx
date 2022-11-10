@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
-import CurrentUserContext from "./context/currentUser";
-import UserAvatar from "./UserAvatar";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import UserAvatar from './UserAvatar';
 
 export default function Header() {
-  const { currentUserAvatar, currentUserName } = useContext(CurrentUserContext)
   return (
     <header>
       <nav>
@@ -12,10 +10,7 @@ export default function Header() {
           Home
         </NavLink>
         <NavLink exact to="/profile">
-          <UserAvatar
-            currentUserAvatar={currentUserAvatar}
-            currentUserName={currentUserName}
-          />
+          <UserAvatar />
         </NavLink>
       </nav>
     </header>

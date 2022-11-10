@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home';
@@ -8,7 +8,6 @@ import Footer from './Footer';
 import { CurrentUserContextProvider } from './context/currentUser';
 
 export default function App() {
-
   return (
     <CurrentUserContextProvider>
       <Router>
@@ -16,12 +15,7 @@ export default function App() {
         <main>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route
-              path="/profile"
-              render={() => {
-                return <Profile />;
-              }}
-            />
+            <Route path="/profile" component={Profile} />
           </Switch>
         </main>
         <Footer />
