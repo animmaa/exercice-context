@@ -1,0 +1,81 @@
+body,
+html,
+#root,
+.App {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --background-color: rgb(44, 44, 44);
+  --forground-color: white;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header {
+  background-color: var(--background-color);
+  color: var(--forground-color);
+  height: 70px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+main {
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--forground-color);
+  font-size: 20px;
+}
+
+nav a.active {
+  color: rgb(172, 216, 101);
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--background-color);
+  color: var(--forground-color);
+  flex-shrink: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar img {
+  height: 30px;
+  width: 30px;
+}
+
+.fa-heart {
+  cursor: pointer;
+}
