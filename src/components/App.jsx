@@ -5,21 +5,12 @@ import Home from './Home';
 import Profile from './Profile';
 import Header from './Header';
 import Footer from './Footer';
-import CurrentUserContext from './context/currentUser';
+import { CurrentUserContextProvider } from './context/currentUser';
 
 export default function App() {
-  const [currentUserName, setCurrentUserName] = useState('');
-  const [currentUserAvatar, setCurrentUserAvatar] = useState('');
 
   return (
-    <CurrentUserContext.Provider
-      value={{
-        currentUserName,
-        setCurrentUserName,
-        currentUserAvatar,
-        setCurrentUserAvatar,
-      }}
-    >
+    <CurrentUserContextProvider>
       <Router>
         <Header />
         <main>
@@ -35,6 +26,6 @@ export default function App() {
         </main>
         <Footer />
       </Router>
-    </CurrentUserContext.Provider>
+    </CurrentUserContextProvider>
   );
 }
