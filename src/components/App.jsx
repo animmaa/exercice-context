@@ -25,12 +25,7 @@ export default function App() {
         <main>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route
-              path="/profile"
-              render={() => {
-                return <Profile />;
-              }}
-            />
+            <Route path="/profile" component={Profile} />
           </Switch>
         </main>
         <Footer />
