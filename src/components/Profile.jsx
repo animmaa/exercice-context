@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import CurrentUserContext from "./context/currentUser";
 import EditProfileForm from "./EditProfileForm";
 
-const Profile = ({
-  currentUserName,
-  setCurrentUserName,
-  currentUserAvatar,
-  setCurrentUserAvatar
-}) => {
+const Profile = () => {
+  const {
+    currentUserName,
+    setCurrentUserName,
+    currentUserAvatar,
+    setCurrentUserAvatar
+  } = useContext(CurrentUserContext)
   return (
     <div>
       <EditProfileForm

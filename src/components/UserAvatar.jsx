@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import CurrentUserContext from "./context/currentUser";
 
-export default function UserAvatar({ currentUserAvatar, currentUserName }) {
+export default function UserAvatar() {
+  const { currentUserAvatar, currentUserName } = useContext(CurrentUserContext)
   return (
     <div className="avatar">
       <img
