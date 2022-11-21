@@ -2,7 +2,12 @@ import React, { useContext } from 'react';
 import CurrentUserContext from './context/currentUser';
 
 export default function EditProfileForm({}) {
-  const {currentUserAvatar, currentUserName, setCurrentUserAvatar, setCurrentUserName} = useContext(CurrentUserContext)
+  const {
+    currentUserAvatar,
+    currentUserName,
+    setCurrentUserAvatar,
+    setCurrentUserName,
+  } = useContext(CurrentUserContext);
   const handleNameInput = (e) => {
     setCurrentUserName(e.target.value);
   };
