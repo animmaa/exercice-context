@@ -1,20 +1,10 @@
-import React from "react";
-import EditProfileForm from "./EditProfileForm";
+import React from 'react';
+import EditProfileForm from './EditProfileForm';
 
-const Profile = ({
-  currentUserName,
-  setCurrentUserName,
-  currentUserAvatar,
-  setCurrentUserAvatar
-}) => {
+const Profile = () => {
   return (
     <div>
-      <EditProfileForm
-        currentUserName={currentUserName}
-        setCurrentUserName={setCurrentUserName}
-        currentUserAvatar={currentUserAvatar}
-        setCurrentUserAvatar={setCurrentUserAvatar}
-      />
+      <EditProfileForm />
     </div>
   );
 };
